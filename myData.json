@@ -1,0 +1,68 @@
+{
+    "processType":"generic",
+    "processName":"PAC-TEST",
+    "parent":"",
+    "processVersion":"18",
+    "plugin steps":[
+        {
+            "type":"finish",
+            "name":"finish-0d75b262-77fa-45c5-9e21-387802a90181"
+        },
+        {
+            "type":"plugin",
+            "name":"MyShell1",
+            "commandName":"Shell",
+            "pluginName":"Shell",
+            "useImpersonation":false,
+            "impersonationGroup":"",
+            "impersonationPassword":"",
+            "impersonationUseSudo":false,
+            "postProcessingScript":"",
+            "authTokenRestriction":"20000001-0001-0001-0001-000000000000",
+            "properties":{
+                "directoryOffset":".",
+                "shellInterpreter":"",
+                "scriptBody":"echo I am testing the PAC feature Step1-Updated Internal demo from Git",
+                "runAsDaemon":"false",
+                "outputFile":"",
+                "tempDirectory":"${p?:agent/temporaryDirectory}"
+            }
+        },
+        {
+            "type":"plugin",
+            "name":"MyShell2",
+            "commandName":"Shell",
+            "pluginName":"Shell",
+            "useImpersonation":false,
+            "impersonationGroup":"",
+            "impersonationPassword":"",
+            "impersonationUseSudo":false,
+            "postProcessingScript":"",
+            "authTokenRestriction":"20000001-0001-0001-0001-000000000000",
+            "properties":{
+                "directoryOffset":".",
+                "shellInterpreter":"",
+                "scriptBody":"echo I am testing the PAC feature Step2 Update813-",
+                "runAsDaemon":"false",
+                "outputFile":"",
+                "tempDirectory":"${p?:agent/temporaryDirectory}"
+            }
+        }
+    ],
+    "steps flow":[
+        {
+            "to":"MyShell1",
+            "type":"ALWAYS"
+        },
+        {
+            "from":"MyShell1",
+            "to":"MyShell2",
+            "type":"SUCCESS"
+        },
+        {
+            "from":"MyShell2",
+            "to":"finish-0d75b262-77fa-45c5-9e21-387802a90181",
+            "type":"SUCCESS"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+name: Upload Process to Devops-Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      
+    - name: Upload Process to Devops-Deploy
+      uses: urbancode/UCD-PAAC-ACTION@v1.1
+      with:
+        deployURL: https://192.168.1.6:8443
+        user: ${{secrets.MY_USER}}
+        password: ${{secrets.MY_PASSWORD}}
+        inputFileDirectory: ${{github.workspace}}
