@@ -2,7 +2,7 @@
     "processType":"generic",
     "processName":"PAC-TEST",
     "parent":"",
-    "processVersion":"18",
+    "processVersion":"19",
     "plugin steps":[
         {
             "type":"finish",
