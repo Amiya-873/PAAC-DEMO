@@ -2,7 +2,7 @@
     "processType":"generic",
     "processName":"PAC-TEST",
     "parent":"",
-    "processVersion":"23",
+    "processVersion":"24",
     "plugin steps":[
         {
             "type":"finish",
@@ -22,7 +22,7 @@
             "properties":{
                 "directoryOffset":".",
                 "shellInterpreter":"",
-                "scriptBody":"echo I am testing the PAC feature Step1-Updated Internal demo from Git v23",
+                "scriptBody":"echo I am testing the PAC feature Step1-Updated Internal demo from Git v24",
                 "runAsDaemon":"false",
                 "outputFile":"",
                 "tempDirectory":"${p?:agent/temporaryDirectory}"
