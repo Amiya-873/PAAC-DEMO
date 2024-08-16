@@ -13,6 +13,10 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
+    - name: Copy Artifacts Directory
+      run: |
+        cp -r ./Amiya-873/ucd-paac-action/artifactory ./artifactory
+
     - name: Upload a Process to Devops-Deploy
       uses: Amiya-873/ucd-paac-action@v1.23
       with:
@@ -20,3 +24,7 @@ jobs:
         username: ${{ secrets.MY_USER }}
         password: ${{ secrets.MY_PASSWORD }}
         inputFileDirectory: ${{ github.workspace }}
+
+    - name: Clean Up
+      run: |
+        rm -rf artifactory
