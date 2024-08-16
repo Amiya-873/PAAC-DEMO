@@ -17,7 +17,7 @@ jobs:
       run: chmod +x ./artifacts/pacc-0.1.0.9999999-SNAPSHOT/upload-generic-process
 
     - name: Upload Process to Devops-Deploy
-      uses: Amiya-873/ucd-paac-action@v1.17
+      uses: Amiya-873/ucd-paac-action@v1.18
       with:
         deployURL: https://192.168.1.6:8443
         username: ${{ secrets.MY_USER }}
