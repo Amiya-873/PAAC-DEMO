@@ -13,12 +13,15 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Copy Artifacts Directory
+    - name: Checkout Artifacts Directory
       run: |
-        cp -r ./Amiya-873/ucd-paac-action/artifactory ./artifactory
+        git clone --depth=1 --filter=blob:none --sparse https://github.com/Amiya-873/ucd-paac-action.git
+        cd ucd-paac-action
+        git sparse-checkout set artifacts
+        cd ..
 
     - name: Upload a Process to Devops-Deploy
-      uses: Amiya-873/ucd-paac-action@v1.23
+      uses: Amiya-873/ucd-paac-action@v1.24
       with:
         deployURL: https://192.168.1.6:8443
         username: ${{ secrets.MY_USER }}
@@ -27,4 +30,4 @@ jobs:
 
     - name: Clean Up
       run: |
-        rm -rf artifactory
+        rm -rf ucd-paac-action
