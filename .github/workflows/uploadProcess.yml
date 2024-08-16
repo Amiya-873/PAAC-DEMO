@@ -13,7 +13,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Upload Process to Devops-Deploy
+    - name: Upload a Process to Devops-Deploy
       uses: Amiya-873/ucd-paac-action@v1.20
       with:
         deployURL: https://192.168.1.6:8443
