@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v3
       
     - name: Upload a Process to Devops-Deploy
-      uses: Amiya-873/UCD-PAAC-ACTION@v1.1
+      uses: Amiya-873/ucd-paac-action@v1.1
       with:
         deployURL: https://192.168.1.6:8443
         user: ${{secrets.MY_USER}}
