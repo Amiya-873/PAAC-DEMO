@@ -20,7 +20,7 @@ jobs:
         git sparse-checkout set artifacts
         cd ..
 
-    - name: Upload a Process to Devops-Deploy
+    - name: Upload Process to Devops-Deploy
       uses: Amiya-873/ucd-paac-action@v1.35
       with:
         deployURL: https://10.138.168.140:8443
