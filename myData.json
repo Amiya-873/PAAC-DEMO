@@ -22,7 +22,7 @@
             "properties":{
                 "directoryOffset":".",
                 "shellInterpreter":"",
-                "scriptBody":"echo I am testing the PAC feature Step1-Updated Internal Demo v31",
+                "scriptBody":"echo I am testing the PAC feature Step1-Updated Internal Demo v31done",
                 "runAsDaemon":"false",
                 "outputFile":"",
                 "tempDirectory":"${p?:agent/temporaryDirectory}"
