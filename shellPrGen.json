@@ -19,7 +19,7 @@
             "properties":{
                 "directoryOffset":".",
                 "shellInterpreter":"",
-                "scriptFile":"$WORKSPACE/Generic-shellProcess-Shell%20Step1.txt",
+                "scriptFile":"Generic-shellProcess-Shell%20Step1.txt",
                 "runAsDaemon":"false",
                 "outputFile":"",
                 "tempDirectory":"${p?:agent/temporaryDirectory}"
@@ -39,7 +39,7 @@
             "properties":{
                 "directoryOffset":".",
                 "shellInterpreter":"",
-                "scriptFile":"$WORKSPACE/Generic-shellProcess-Shell%20Step2.txt",
+                "scriptFile":"Generic-shellProcess-Shell%20Step2.txt",
                 "runAsDaemon":"false",
                 "outputFile":"",
                 "tempDirectory":"${p?:agent/temporaryDirectory}"
