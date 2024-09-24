@@ -3,7 +3,7 @@
     "processType":"generic",
     "processName":"shellProcess",
     "parent":"",
-    "processVersion":"19",
+    "processVersion":"21",
     "plugin steps":[
         {
             "type":"plugin",
